@@ -1,0 +1,40 @@
+body {
+  font-family: 'Open+Sans', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  background: #fff;
+  overflow-x: hidden;
+}
+a {
+	cursor: pointer;
+}
+
+.osso {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+/*	background-image: url(x.jpg);*/
+}
+
+.medula {
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%)
+}
+.medula a {
+	text-decoration: none;
+	border: none;
+}
+.medula a:hover {
+	font-style: italic;
+}
+
+.brand {
+	width: 200px;
+}
