@@ -1,3 +1,21 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php74-script .php
+suPHP_ConfigPath /home/estudiovertebra/
+##### LOCAWEB - NAO REMOVER #####
+
+
+# BEGIN WordPress
+# As diretrizes (linhas) entre "BEGIN WordPress" e "END WordPress" são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+<IfModule mod_rewrite.c>
 RewriteEngine Off
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.estudiovertebra.com/$1 [R,L]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
